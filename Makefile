@@ -22,7 +22,7 @@ stop:
 	$(COMPOSE) stop
 
 start:
-	$(COMPOSE) up -d
+	$(COMPOSE) up
 
 clean:
 	$(COMPOSE) down -v

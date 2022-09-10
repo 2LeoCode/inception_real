@@ -5,6 +5,7 @@ if  [ ! -f "$FILE" ]
 then
 	echo "Creating DB"
 	eval "echo \"$(cat /tmp/init.sql)\"" > /tmp/init_env.sql
+	ls /tmp
 #	envsubst < /tmp/init.sql > /tmp/init_env.sql
 	service mysql start
 	mysql -D mysql < /tmp/init_env.sql | true
